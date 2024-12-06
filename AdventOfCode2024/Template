@@ -1,0 +1,12 @@
+public class DayXY : ITaskRunner
+{
+    public void RunTheTask()
+    {
+
+        var inputSplit = input.Split('\n');
+
+    }
+
+    private string input = @"";
+
+}

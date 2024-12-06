@@ -1010,8 +1010,8 @@ string input = @"27636   67663
         foreach (string pair in input.Split('\n'))
         {
             var elements = pair.Trim().Split(' ');
-            firstList.Add(Int32.Parse(elements[0]));
-            secondList.Add(Int32.Parse(elements[3]));
+            firstList.Add(int.Parse(elements[0]));
+            secondList.Add(int.Parse(elements[3]));
         }
         firstList.Sort();
         secondList.Sort();
