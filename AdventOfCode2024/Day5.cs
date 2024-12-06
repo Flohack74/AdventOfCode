@@ -4,7 +4,7 @@ public class Day5 : ITaskRunner
     public void RunTheTask()
     {
 
-        var inputSplit = input.Split('\n');
+        var inputSplit = input2.Split('\n');
         var pageRules = new Dictionary<int, List<int>>();
         var rulesMode = true;
         var pageLists = new List<List<int>>();
@@ -23,6 +23,7 @@ public class Day5 : ITaskRunner
             }
         }
 
+        var pageListsToFix = new List<List<int>>();
         var result = 0;
         foreach (var pageList in pageLists) {
             var validResult = true;
@@ -36,6 +37,7 @@ public class Day5 : ITaskRunner
                     }
                 }
                 if (!validResult) {
+                    pageListsToFix.Add(pageList);
                     break;
                 }
             }
@@ -47,6 +49,13 @@ public class Day5 : ITaskRunner
 
         Console.WriteLine($"Day 5 task 1: {result}");
     
+        result = 0;
+
+        foreach (var pageList in pageListsToFix) {
+
+        }
+
+        Console.WriteLine($"Day 5 task 2: {result}");
     }
 
 private string input2 = @"47|53
